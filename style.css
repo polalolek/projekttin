@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #9a1616;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.screen {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+button {
+    width: 150px;
+    height: 100px;
+    background: #550505;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #972525;
+    transform: translateY(-2px);
+}
+
+.buttons-container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.buttons-row {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.score {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.question-number {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+#question {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    min-height: 70px;
+}
+
+#answers {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+}
+
+.answer {
+    background: #fff;
+    color: #333;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.answer:hover {
+    transform: scale(1.05);
+}
+
+.answer.correct {
+    background: #46ae3c;
+    color: white;
+}
+
+.answer.wrong {
+    background: #e31e24;
+    color: white;
+}
+
+#end-screen h1 {
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+#end-screen p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.koty {
+    width: 100%;
+    max-width: 160px;
+    height: 90px;
+    background: #b14858;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.koty:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background: #e18896;
+}
+
+.reset-button {
+    margin: 10px 0;
+}
+
+.instructions {
+    margin: 10px 0;
+    padding: 20px 25px;
+    border-radius: 20px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.3);
+}
+
+.instructions h2 {
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.instructions ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.start-button {
+    margin: 15px 0;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.avatar-small {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto 10px auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.champion {
+    margin-top: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@media (max-width: 450px){
+    .logo {
+        font-size: 3em;
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .avatar-small {
+        width: 60px;
+        height: 60px;
+    }
+
+    .koty {
+        width: 120px;
+        height: 70px;
+        font-size: 1em;
+    }
+
+    #question {
+        font-size: 1.5em;
+    }
+}
+.paw {
+    position: absolute;
+    pointer-events: none;
+    animation: float 6s linear forwards;
+    z-index: 1000;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

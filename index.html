@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowhoot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1 class="logo">Meowhoot</h1>
+            <div class="avatar">
+                <img src="https://media.discordapp.net/attachments/1448203832315088999/1455317926277021870/IMG_8126.jpg?ex=695a38b0&is=6958e730&hm=49105b4dc00c4afda0e7f8ef6abab6111f733172d3f4e620e9d6fef2fe43c2d7&=&format=webp&width=870&height=1546" alt="avatar">
+            </div>
+            <div class="instructions">
+                <h2>How to play</h2>
+                <ul>
+                    <li>Choose a category to start the quiz.</li>
+                    <li>You earn 100 points for each correct answer.</li>
+                    <li>Try to get the highest score!</li>
+                </ul>
+            </div>
+            <button class="start-button" onclick="startGame()">Start</button>
+        </div>
+
+        <div id="category" class="screen hidden">
+            <h1 class="logo">Meowhoot</h1>
+            <div class="buttons-container">
+                <p class="subtitle">Choose Category</p>
+                <div class="buttons-row">
+                    <button class="koty" onclick="selectCategory('koty')">koty</button>
+                    <button class="koty" onclick="selectCategory('gry')">gry</button>
+                    <button class="koty" onclick="selectCategory('technologia')">technologia</button>
+                    <button class="koty" onclick="selectCategory('jedzenie')">jedzenie</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <h1 class="logo">Meowhoot</h1>
+            <div class="avatar-small">
+                <img src="https://media.discordapp.net/attachments/1448203832315088999/1455317926277021870/IMG_8126.jpg?ex=695a38b0&is=6958e730&hm=49105b4dc00c4afda0e7f8ef6abab6111f733172d3f4e620e9d6fef2fe43c2d7&=&format=webp&width=870&height=1546" alt="avatar">
+                <p class="username logo">User</p>
+            </div>
+            <div class="score">Points: <span id="points">0</span></div>
+            <div class="question-number">Question <span id="q-num">1</span>/<span id="q-total">3</span></div>
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+            <button class="reset-button" onclick="location.reload()">Reset</button>
+        </div>
+
+        <div id="end-screen" class="screen hidden">
+            <h1 class="logo">Meowhoot</h1>
+            <h1>The end</h1>
+            <p>Points <span id="final-score">0</span> points</p>
+            <p id="champion-title" class="champion hidden"></p>
+            <button onclick="location.reload()">Play again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
